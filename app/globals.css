@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+	--background: #ffffff;
+	--foreground: #000000;
+}
+
+.dark {
+	--background: #141619;
+	--foreground: #b3b4bd;
+}
