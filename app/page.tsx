@@ -1,3 +1,3 @@
 export default function Home() {
-	return <h1>the peeg and the neeg</h1>;
+	return <h1>chat is this rizz 🙀</h1>;
 }
