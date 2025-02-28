@@ -2,11 +2,12 @@ import { categories, type Category, getPostsByCategory } from "@/app/posts";
 import { Posts } from "@/components/Posts";
 import { notFound } from "next/navigation";
 
-export default async function Category({
-  params,
-}: {
-  params: { category: Category };
-}) {
+export default async function Category(
+  props: {
+    params: Promise<{ category: Category }>;
+  }
+) {
+  const params = await props.params;
   const { category } = params;
 
   if (categories.indexOf(category) == -1) notFound();
