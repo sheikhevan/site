@@ -6,7 +6,6 @@ export default async function Blog() {
 
   return (
     <main>
-      <h1>Next.js MDX Blog</h1>
       <Posts posts={posts} />
     </main>
   );

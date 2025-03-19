@@ -1,4 +1,4 @@
-import { readdir } from "node:fs/promises";
+import {readdir} from "node:fs/promises";
 
 export type Category = (typeof categories)[number];
 
@@ -18,11 +18,9 @@ export async function getPostsByCategory({
 }): Promise<Post[]> {
   const allPosts = await getPosts();
 
-  const posts = allPosts.filter(
-    (post) => post.categories.indexOf(category) !== -1,
+  return allPosts.filter(
+      (post) => post.categories.indexOf(category) !== -1,
   );
-
-  return posts;
 }
 
 export async function getPosts(): Promise<Post[]> {

@@ -12,45 +12,13 @@ export default {
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        kanagawa: {
+        evancustom: {
           // Base colors
-          fujiWhite: "#DCD7BA", // Default text color
-          oldWhite: "#C8C093", // Secondary text
-          sumiInk0: "#16161D", // Darkest background
-          sumiInk1: "#1F1F28", // Default background
-          sumiInk2: "#2A2A37", // Lighter background
-          sumiInk3: "#363646", // Selection background
-          sumiInk4: "#54546D", // Comments, non-text characters
-          waveBlue1: "#223249", // Darker blue variant
-          waveBlue2: "#2D4F67", // Blue variant
-
-          // Accent colors
-          crystalBlue: "#7E9CD8", // Light blue
-          springViolet1: "#938AA9", // Lavender
-          springViolet2: "#9CABCA", // Lighter violet
-          springBlue: "#7FB4CA", // Cyan
-          oniViolet: "#957FB8", // Purple
-          winterGreen: "#2B3328", // Deep green background
-          winterYellow: "#49443C", // Yellowish background
-          winterRed: "#43242B", // Red background
-          winterBlue: "#252535", // Blue background
-          autumnGreen: "#76946A", // Green
-          autumnRed: "#C34043", // Red
-          autumnYellow: "#DCA561", // Yellow/orange
-          samuraiRed: "#E82424", // Bright red
-          roninYellow: "#FF9E3B", // Bright yellow
-          waveAqua1: "#6A9589", // Teal
-          dragonBlue: "#658594", // Grayish blue
-          fujiGray: "#727169", // Gray
-          springGreen: "#98BB6C", // Bright green
-          boatYellow1: "#938056", // Brownish yellow
-          boatYellow2: "#C0A36E", // Light brown
-          carpYellow: "#E6C384", // Light yellow
-          sakuraPink: "#D27E99", // Pink
-          waveRed: "#E46876", // Salmon/coral
-          peachRed: "#FF5D62", // Brighter red
-          surimiOrange: "#FFA066", // Orange
-          katanaGray: "#717C7C", // Grayish teal
+          nonPhotoBlue: "#8EDCE6",
+          lavender: "#D5DCF9",
+          powderBlue: "#A7B0CA",
+          umber: "#725E54",
+          taupe: "#443627"
         },
         card: {
           DEFAULT: "hsl(var(--card))",
