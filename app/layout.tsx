@@ -1,17 +1,23 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Montserrat, JetBrains_Mono, Abril_Fatface } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrainsmono",
   subsets: ["latin"],
 });
+
+const abrilFatface = Abril_Fatface({
+    variable: "--font-abrilfatface",
+    subsets: ["latin"],
+    weight: "400",
+})
 
 export const metadata: Metadata = {
   title: "Evan Alvarez",
@@ -26,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${montserrat.variable} ${jetbrainsMono.variable} ${abrilFatface.variable} antialiased`}
       >
         <NavBar />
         {children}

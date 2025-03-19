@@ -1,19 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { FileText, Command, Github } from "lucide-react";
+import {FileText, Command, Github, Linkedin} from "lucide-react";
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
-import { JetBrains_Mono } from "next/font/google";
-
-// Load Amstelvar font
-const jetbrainsmono = JetBrains_Mono({
-  variable: "--font-jetbrainsmono",
-  subsets: ["latin"],
-});
 
 export default function Navbar() {
   const iconLinks = [
@@ -24,12 +17,17 @@ export default function Navbar() {
       href: "https://github.com/sheikhevan",
       ariaLabel: "GitHub",
     },
+    {
+      icon: Linkedin,
+      href: "https://linkedin.com/in/evan-alvarez-27256a326/",
+      ariaLabel: "LinkedIn",
+    }
   ];
 
   return (
     <header className="w-full py-6 px-4 md:px-6 bg-transparent">
       <div className="flex justify-between items-center w-full">
-        <h1 className={`text-xl font-medium ${jetbrainsmono.className}`}>
+        <h1 className={`text-xl font-medium font-mono`}>
           <Link href="/" className="text-gray-800 hover:text-black">
             /EvanAlvarez
           </Link>
