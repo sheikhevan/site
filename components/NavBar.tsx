@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import {FileText, Command, Github, Linkedin} from "lucide-react";
+import { FileText, Command, Github, Linkedin } from "lucide-react";
 import {
   HoverCard,
   HoverCardContent,
@@ -10,7 +10,7 @@ import {
 
 export default function Navbar() {
   const iconLinks = [
-    { icon: FileText, href: "/blog/hello-world", ariaLabel: "Blog" },
+    { icon: FileText, href: "/blog/", ariaLabel: "Blog" },
     { icon: Command, href: "/projects", ariaLabel: "Projects" },
     {
       icon: Github,
@@ -21,7 +21,7 @@ export default function Navbar() {
       icon: Linkedin,
       href: "https://linkedin.com/in/evan-alvarez-27256a326/",
       ariaLabel: "LinkedIn",
-    }
+    },
   ];
 
   return (

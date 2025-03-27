@@ -14,10 +14,10 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 const abrilFatface = Abril_Fatface({
-    variable: "--font-abrilfatface",
-    subsets: ["latin"],
-    weight: "400",
-})
+  variable: "--font-abrilfatface",
+  subsets: ["latin"],
+  weight: "400",
+});
 
 export const metadata: Metadata = {
   title: "Evan Alvarez",

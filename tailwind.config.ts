@@ -12,13 +12,38 @@ export default {
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        evancustom: {
-          // Base colors
-          nonPhotoBlue: "#8EDCE6",
-          lavender: "#D5DCF9",
-          powderBlue: "#A7B0CA",
-          umber: "#725E54",
-          taupe: "#443627"
+        everforest: {
+          // Backgrounds
+          "bg-dim": "#232a2e", // bg_dim
+          bg0: "#272e33", // bg0
+          bg1: "#2e383c", // bg1 (often the main editor background)
+          bg2: "#38444a", // bg2
+          bg3: "#434f55", // bg3
+          bg4: "#4d595f", // bg4
+          bg5: "#56635f", // bg5 (used for statusline bg)
+          "bg-red": "#4f383a", // bg_red
+          "bg-green": "#424b3f", // bg_green
+          "bg-blue": "#3a4b51", // bg_blue
+          "bg-yellow": "#554940", // bg_yellow
+          "bg-visual": "#4f4249", // bg_visual (visual selection)
+
+          // Foregrounds
+          fg: "#d3c6aa", // fg (main foreground)
+          "fg-dim": "#a6b0a0", // grey1 (dimmer foreground, comments)
+
+          // Grays
+          grey0: "#7a8478",
+          grey1: "#859289",
+          grey2: "#9da9a0",
+
+          // Colors
+          red: "#e67e80",
+          orange: "#e69875",
+          yellow: "#dbbc7f",
+          green: "#a7c080",
+          aqua: "#83c092", // Sometimes called cyan
+          blue: "#7fbbb3",
+          purple: "#d699b6",
         },
         card: {
           DEFAULT: "hsl(var(--card))",
