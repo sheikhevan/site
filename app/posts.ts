@@ -2,7 +2,7 @@ import { readdir } from "node:fs/promises";
 
 export type Category = (typeof categories)[number];
 
-export const categories = ["philosophy", "free-will", "religion"] as const;
+export const categories = ["society", "conformity"] as const;
 
 export interface Post {
   slug: string;

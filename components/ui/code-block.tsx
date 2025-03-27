@@ -2,7 +2,6 @@
 import React from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import {
-  oneDark,
   oneLight,
 } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import { CircleCheck, Copy } from "lucide-react";

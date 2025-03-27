@@ -17,7 +17,7 @@ export default function Home() {
   ];
   return (
     <div className="flex items-center flex-col justify-center">
-      <h1 className="text-9xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-everforest-green to-everforest-aqua">
+      <h1 className="text-4xl md:text-9xl py-2 md:py-5 font-bold bg-clip-text text-transparent bg-gradient-to-b from-everforest-green to-everforest-aqua">
         Evan Alvarez
       </h1>
       <TypewriterEffect

@@ -2,21 +2,20 @@ import { CodeBlock } from "@/components/ui/code-block";
 import React, { type ComponentPropsWithoutRef } from "react";
 
 function isReactElementWithProps(
-  node: React.ReactNode,
-): node is React.ReactElement<{ [key: string]: any }> {
+    node: React.ReactNode,
+): node is React.ReactElement<{ [key: string]: unknown }> {
   return (
-    React.isValidElement(node) &&
-    typeof node.props === "object" &&
-    node.props !== null
+      React.isValidElement(node) &&
+      typeof node.props === "object" &&
+      node.props !== null
   );
 }
 
 export function Pre({
-  children,
-  // className from <pre> - we know this is likely empty based on debug
-  className: preClassName,
-  ...props // Other props potentially added to <pre> by plugins
-}: ComponentPropsWithoutRef<"pre">) {
+                      children,
+                      className: preClassName,
+                      ...props
+                    }: ComponentPropsWithoutRef<"pre">) {
   let language = "plaintext"; // Default language
   let code = "";
   let childClassName = ""; // Store the child's className if found
@@ -29,14 +28,23 @@ export function Pre({
     }
 
     const childCodeContent = children.props.children;
+
+    // More robust type checking for childCodeContent
     if (typeof childCodeContent === "string") {
       code = childCodeContent.trimEnd();
     } else if (Array.isArray(childCodeContent)) {
-      code = childCodeContent
-        .map((child) =>
-          typeof child === "string" ? child : child?.props?.children || "",
-        )
-        .join("");
+      // Add type assertion to resolve the 'never' type issue
+      code = (childCodeContent as React.ReactNode[])
+          .map((child) => {
+            if (typeof child === "string") return child;
+            if (isReactElementWithProps(child)) {
+              return typeof child.props.children === "string"
+                  ? child.props.children
+                  : "";
+            }
+            return "";
+          })
+          .join("");
     }
   } else if (typeof children === "string") {
     code = children.trimEnd();
@@ -47,6 +55,6 @@ export function Pre({
   }
 
   return (
-    <CodeBlock language={language} code={code} filename={language} {...props} />
+      <CodeBlock language={language} code={code} filename={language} {...props} />
   );
 }

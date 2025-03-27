@@ -19,10 +19,7 @@ export function Posts({ posts }: { posts: Post[] }) {
             <div className="flex items-center gap-1.5">
               {" "}
               <CalendarDays className="h-4 w-4" /> {/* Icon */}
-              <span>
-                {" "}
-                {new Date(publishDate).toLocaleDateString()}
-              </span>
+              <span> {new Date(publishDate).toLocaleDateString()}</span>
             </div>
 
             {categories && categories.length > 0 && (
