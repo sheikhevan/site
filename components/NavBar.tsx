@@ -28,7 +28,7 @@ export default function Navbar() {
     <header className="w-full py-6 px-4 md:px-6 bg-transparent">
       <div className="flex justify-between items-center w-full">
         <h1 className={`text-xl font-medium font-mono`}>
-          <Link href="/" className="text-sm md:text-lg text-gray-800 hover:text-black">
+          <Link href="/" className="text-sm md:text-lg text-everforest-bg0 hover:text-black">
             /EvanAlvarez
           </Link>
         </h1>
