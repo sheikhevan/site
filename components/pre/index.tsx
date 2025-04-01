@@ -2,20 +2,20 @@ import { CodeBlock } from "@/components/ui/code-block";
 import React, { type ComponentPropsWithoutRef } from "react";
 
 function isReactElementWithProps(
-    node: React.ReactNode,
+  node: React.ReactNode,
 ): node is React.ReactElement<{ [key: string]: unknown }> {
   return (
-      React.isValidElement(node) &&
-      typeof node.props === "object" &&
-      node.props !== null
+    React.isValidElement(node) &&
+    typeof node.props === "object" &&
+    node.props !== null
   );
 }
 
 export function Pre({
-                      children,
-                      className: preClassName,
-                      ...props
-                    }: ComponentPropsWithoutRef<"pre">) {
+  children,
+  className: preClassName,
+  ...props
+}: ComponentPropsWithoutRef<"pre">) {
   let language = "plaintext"; // Default language
   let code = "";
   let childClassName = ""; // Store the child's className if found
@@ -35,16 +35,16 @@ export function Pre({
     } else if (Array.isArray(childCodeContent)) {
       // Add type assertion to resolve the 'never' type issue
       code = (childCodeContent as React.ReactNode[])
-          .map((child) => {
-            if (typeof child === "string") return child;
-            if (isReactElementWithProps(child)) {
-              return typeof child.props.children === "string"
-                  ? child.props.children
-                  : "";
-            }
-            return "";
-          })
-          .join("");
+        .map((child) => {
+          if (typeof child === "string") return child;
+          if (isReactElementWithProps(child)) {
+            return typeof child.props.children === "string"
+              ? child.props.children
+              : "";
+          }
+          return "";
+        })
+        .join("");
     }
   } else if (typeof children === "string") {
     code = children.trimEnd();
@@ -55,6 +55,6 @@ export function Pre({
   }
 
   return (
-      <CodeBlock language={language} code={code} filename={language} {...props} />
+    <CodeBlock language={language} code={code} filename={language} {...props} />
   );
 }

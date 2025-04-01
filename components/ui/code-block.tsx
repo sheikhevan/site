@@ -1,9 +1,7 @@
 "use client";
 import React from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import {
-  oneLight,
-} from "react-syntax-highlighter/dist/cjs/styles/prism";
+import { oneLight } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import { CircleCheck, Copy } from "lucide-react";
 
 export type CodeBlockProps = {

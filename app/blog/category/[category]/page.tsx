@@ -19,7 +19,7 @@ export default async function CategoryPage(props: {
   return (
     <main className="mx-auto w-full max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
       <h1 className="mb-4 text-center text-4xl font-bold hover:underline tracking-tight md:text-5xl">
-          <Link href="/blog">Digital Garden 🌸</Link>
+        <Link href="/blog">Digital Garden 🌸</Link>
       </h1>
 
       <div className="mb-8 flex items-center justify-center gap-x-3 text-center text-3xl font-bold capitalize tracking-tight md:text-4xl">
