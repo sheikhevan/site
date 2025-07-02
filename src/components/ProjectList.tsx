@@ -14,7 +14,6 @@ export default function ProjectList() {
             <a href={project.link}>
               <li
                 className="pt-5 text-center font-bold hover:underline"
-                key={index}
               >
                 {project.title}
               </li>

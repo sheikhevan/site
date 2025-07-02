@@ -1,5 +1,6 @@
 ---
 import "@/styles/global.css";
+import { Github, Instagram, Youtube, Mail } from "@lucide/astro";
 import ProjectList from "@/components/ProjectList";
 import BlogList from "@/components/BlogList";
 ---
@@ -22,9 +23,45 @@ import BlogList from "@/components/BlogList";
         class="grid h-[75%] w-full grid-cols-4 grid-rows-2 gap-4 rounded-lg p-2 shadow-md"
       >
         <div
-          class="col-span-1 row-span-1 flex justify-center rounded-lg bg-gray-200 shadow-md"
+          class="col-span-1 row-span-1 flex flex-col items-center rounded-lg bg-gray-200 shadow-md"
         >
           <h2 class="pt-10 text-xl font-bold underline">Links 🔗</h2>
+
+          <!-- Instagram -->
+          <a
+            class="flex flex-row gap-1.5 pt-5"
+            href="https://instagram.com/hispanic.habibi"
+          >
+            <Instagram />
+            <h3>@hispanic.habibi</h3>
+          </a>
+
+          <!-- YouTube -->
+          <a
+            class="flex flex-row gap-1.5 pt-5"
+            href="https://www.youtube.com/@sheikhevan0"
+          >
+            <Youtube />
+            <h3>@sheikhevan0</h3>
+          </a>
+
+          <!-- Github -->
+          <a
+            class="flex flex-row gap-1.5 pt-5"
+            href="https://github.com/sheikhevan"
+          >
+            <Github />
+            <h3>sheikhevan</h3>
+          </a>
+
+          <!-- Email -->
+          <a
+            class="flex flex-row gap-1.5 pt-5"
+            href="mailto:evanalvarez@tutamail.com"
+          >
+            <Mail />
+            <h3>evanalvarez@tutamail.com</h3>
+          </a>
         </div>
 
         <div
