@@ -1,16 +1,62 @@
 ---
-
+import "@/styles/global.css";
+import ProjectTable from "@/components/ProjectTable";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+    <!-- this is the desktop section -->
+
+    <div
+      class="m-auto hidden h-screen w-[75%] items-center justify-center lg:flex"
+    >
+      <div
+        class="grid h-[75%] w-full grid-cols-4 grid-rows-2 gap-4 rounded-lg p-2 shadow-md"
+      >
+        <div
+          class="col-span-1 row-span-1 flex justify-center rounded-lg bg-gray-200 shadow-md"
+        >
+          <h2 class="pt-10 text-xl font-bold underline">Skills 🤹‍♂️</h2>
+        </div>
+
+        <div
+          class="col-span-1 row-span-1 flex items-center justify-center rounded-lg bg-gray-200 shadow-md"
+        >
+          2
+        </div>
+
+        <div
+          class="col-span-1 row-span-1 flex items-center justify-center rounded-lg bg-gray-200 shadow-md"
+        >
+          3
+        </div>
+
+        <div
+          class="col-span-1 row-span-2 flex justify-center rounded-lg bg-gray-200 shadow-md"
+        >
+          <h2 class="pt-10 text-xl font-bold underline">Writings ✍️</h2>
+        </div>
+        <div
+          class="col-span-1 row-span-1 flex flex-col items-center rounded-lg bg-gray-200 shadow-md"
+        >
+          <h2 class="pt-10 text-xl font-bold underline">Projects 💻</h2>
+          <ProjectTable />
+        </div>
+        <div
+          class="col-span-2 row-span-1 flex items-center justify-center rounded-lg bg-gray-200 shadow-md"
+        >
+          6
+        </div>
+      </div>
+    </div>
+
+    <!-- this is the mobile section -->
+  </body>
 </html>
