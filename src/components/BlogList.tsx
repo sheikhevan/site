@@ -6,11 +6,12 @@ export default function BlogList() {
     <div>
       <ul className="flex max-h-[600px] flex-col overflow-y-scroll">
       {posts.slice(0, 4).map((post, index) => (
-        <article key={index}>
-          <h3>{post.frontmatter.title}</h3>
-          <p>{post.frontmatter.description}</p>
-          <a href={post.url}>Read more</a>
-        </article>
+        <div key={index}>
+            <a href={post.url}>
+          <li className="pt-5 text-center font-bold hover:underline">{post.frontmatter.title}</li>
+          </a>
+          <p className="px-10 text-center text-gray-500">{post.frontmatter.description}</p>
+        </div>
       ))}
       </ul>
     </div>
