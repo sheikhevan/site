@@ -3,7 +3,6 @@ title: What tech do I use? (2025)
 date: 07-02-2025
 description: An explanation of my technological choices.
 author: Evan Alvarez
-tags: ["software", "linux", "open-source"]
 layout: "@/layouts/PostLayout.astro"
 ---
 
