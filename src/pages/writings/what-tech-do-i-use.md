@@ -41,4 +41,4 @@ Arch Linux for the first time. You can find my configuration along with the rest
 
 # Miscellaneous
 I have a Trezor Safe 3 for my cryptocurrency (mainly BTC and XMR). I also have several cheap desktop computers that I use as servers for my homelab, as well as just storage
-because I am kind of a data hoarder.
+because I am kind of a data hoarder. For listening to things, I use Bose QC45 headphones.
