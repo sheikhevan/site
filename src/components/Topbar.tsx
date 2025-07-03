@@ -1,14 +1,11 @@
 const Topbar = () => {
   return (
     <nav className="bg-everforest-bgdim pt-[2rem]">
-      <div className="max-w-screen-xl mx-auto px-6">
+      <div className="mx-auto max-w-screen-xl px-6">
         <div className="flex items-center justify-end">
-          <div className="text-lg lg:text-xl space-x-1 text-everforest-fg">
+          <div className="text-everforest-fg space-x-1 text-lg lg:text-xl">
             <span>[</span>
-            <a
-              href="/"
-              className="text-everforest-green hover:underline"
-            >
+            <a href="/" className="text-everforest-green hover:underline">
               home
             </a>
             <span>]</span>
@@ -42,4 +39,3 @@ const Topbar = () => {
 };
 
 export default Topbar;
-
