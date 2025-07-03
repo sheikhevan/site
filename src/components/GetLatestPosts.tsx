@@ -1,5 +1,5 @@
 export default function GetLatestPosts() {
-  const matches = import.meta.glob("@/pages/writings/*.md", { eager: true });
+  const matches = import.meta.glob("@/pages/writings/*/*.md", { eager: true });
   const posts = Object.values(matches);
   const sortedPosts = posts.sort((a, b) => {
     return Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date);
