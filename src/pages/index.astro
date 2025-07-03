@@ -1,7 +1,6 @@
 ---
 import "@/styles/global.css";
 import Topbar from "@/components/Topbar";
-import * as techPost from "@/pages/writings/what-tech-do-i-use.md";
 ---
 
 <html lang="en">
@@ -17,25 +16,29 @@ import * as techPost from "@/pages/writings/what-tech-do-i-use.md";
     <div class="mx-auto max-w-screen-xl px-6">
       <div class="flex items-center justify-start">
         <div class="text-everforest-fg pt-[5rem] text-3xl lg:text-5xl">
-          <p class="font-alegreya font-bold">evan alvarez</p>
+          <h1 class="font-alegreya font-bold">evan alvarez</h1>
           <a
             href="mailto:evanalvarez@tutamail.com"
-            class="text-everforest-green text-sm lg:text-lg">email</a
+            class="text-everforest-green text-sm hover:underline lg:text-lg"
+            >email</a
           >
           <span class="text-2xl lg:text-3xl">::</span>
           <a
             href="https://github.com/sheikhevan"
-            class="text-everforest-green text-sm lg:text-lg">github</a
+            class="text-everforest-green text-sm hover:underline lg:text-lg"
+            >github</a
           >
           <span class="text-2xl lg:text-3xl">::</span>
           <a
             href="https://youtube.com/@sheikhevan0"
-            class="text-everforest-green text-sm lg:text-lg">youtube</a
+            class="text-everforest-green text-sm hover:underline lg:text-lg"
+            >youtube</a
           >
           <span class="text-2xl lg:text-3xl">::</span>
           <a
             href="https://example.com"
-            class="text-everforest-green text-sm lg:text-lg">resume</a
+            class="text-everforest-green text-sm hover:underline lg:text-lg"
+            >resume</a
           >
         </div>
       </div>
@@ -43,11 +46,13 @@ import * as techPost from "@/pages/writings/what-tech-do-i-use.md";
         Welcome to my small corner of the internet! I'm a programmer primarily
         focused on web development based out of Austin, Texas. I am also
         currently a senior at UTHS. On this page, I <a
-          class="text-everforest-green"
+          class="text-everforest-green hover:underline"
           href="/writings">write</a
         > about things I enjoy talking about. I am also a proud user of free (as
         in freedom) software. You can read more about my operating system and development
-        environment <a class="text-everforest-green" href={techPost.url}>here</a
+        environment <a
+          class="text-everforest-green hover:underline"
+          href="writings/what-tech-do-i-use">here</a
         >.
       </div>
     </div>

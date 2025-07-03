@@ -1,6 +1,6 @@
 const Topbar = () => {
   return (
-    <nav className="bg-everforest-bgdim pt-[3rem]">
+    <nav className="bg-everforest-bgdim pt-[2rem]">
       <div className="max-w-screen-xl mx-auto px-6">
         <div className="flex items-center justify-end">
           <div className="text-lg lg:text-xl space-x-1 text-everforest-fg">
