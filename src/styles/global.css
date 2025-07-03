@@ -1,9 +1,17 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import "@fontsource/alegreya";
+@import "@fontsource/alegreya-sans";
 
-@custom-variant dark (&:is(.dark *));
+@custom-variant dark (&: is(.dark *));
 
 @theme inline {
+  --color-everforest-bgdim: #1e2326;
+  --color-everforest-bg: #272e33;
+  --color-everforest-fg: #d3c6aa;
+  --color-everforest-green: #a7c080;
+  --font-sans: "Alegreya Sans", "sans-serif";
+  --font-alegreya: "Alegreya", "sans-serif";
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);

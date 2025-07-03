@@ -1,8 +1,6 @@
 ---
 import "@/styles/global.css";
-import { Github, Instagram, Youtube, Mail } from "@lucide/astro";
-import ProjectList from "@/components/ProjectList";
-import BlogList from "@/components/BlogList";
+import Topbar from "@/components/Topbar";
 ---
 
 <html lang="en">
@@ -11,91 +9,30 @@ import BlogList from "@/components/BlogList";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Evan Alvarez</title>
+    <title>home :: evanalvarez.dev</title>
   </head>
-  <body>
-    <!-- this is the desktop section -->
-
-    <div
-      class="m-auto hidden h-screen w-[75%] items-center justify-center lg:flex"
-    >
-      <div
-        class="grid h-[75%] w-full grid-cols-4 grid-rows-2 gap-4 rounded-lg p-2 shadow-md"
-      >
-        <div
-          class="col-span-1 row-span-1 flex flex-col items-center rounded-lg bg-gray-200 shadow-md"
-        >
-          <h2 class="pt-10 text-xl font-bold underline">Links 🔗</h2>
-
-          <!-- Instagram -->
+  <body class="bg-everforest-bgdim">
+    <Topbar />
+    <div class="mx-auto max-w-screen-xl px-6">
+      <div class="flex items-center justify-start">
+        <div class="text-everforest-fg pt-[5rem] text-3xl lg:text-5xl">
+          <p class="font-alegreya font-bold">evan alvarez</p>
           <a
-            class="flex flex-row gap-1.5 pt-5"
-            href="https://instagram.com/hispanic.habibi"
-          >
-            <Instagram />
-            <h3>@hispanic.habibi</h3>
-          </a>
-
-          <!-- YouTube -->
-          <a
-            class="flex flex-row gap-1.5 pt-5"
-            href="https://www.youtube.com/@sheikhevan0"
-          >
-            <Youtube />
-            <h3>@sheikhevan0</h3>
-          </a>
-
-          <!-- Github -->
-          <a
-            class="flex flex-row gap-1.5 pt-5"
-            href="https://github.com/sheikhevan"
-          >
-            <Github />
-            <h3>sheikhevan</h3>
-          </a>
-
-          <!-- Email -->
-          <a
-            class="flex flex-row gap-1.5 pt-5"
             href="mailto:evanalvarez@tutamail.com"
+            class="text-everforest-green text-sm lg:text-lg">email</a
           >
-            <Mail />
-            <h3>evanalvarez@tutamail.com</h3>
-          </a>
-        </div>
-
-        <div
-          class="col-span-1 row-span-1 flex items-center justify-center rounded-lg bg-gray-200 shadow-md"
-        >
-          2
-        </div>
-
-        <div
-          class="col-span-1 row-span-1 flex items-center justify-center rounded-lg bg-gray-200 shadow-md"
-        >
-          3
-        </div>
-
-        <div
-          class="col-span-1 row-span-2 flex flex-col items-center rounded-lg bg-gray-200 shadow-md"
-        >
-          <h2 class="pt-10 text-xl font-bold underline">Writings ✍️</h2>
-          <BlogList client:load />
-        </div>
-        <div
-          class="col-span-1 row-span-1 flex flex-col items-center rounded-lg bg-gray-200 shadow-md"
-        >
-          <h2 class="pt-10 text-xl font-bold underline">Projects 💻</h2>
-          <ProjectList />
-        </div>
-        <div
-          class="col-span-2 row-span-1 flex items-center justify-center rounded-lg bg-gray-200 shadow-md"
-        >
-          6
+          <span class="text-2xl lg:text-3xl">::</span>
+          <a
+            href="https://github.com/sheikhevan"
+            class="text-everforest-green text-sm lg:text-lg">github</a
+          >
+          <span class="text-2xl lg:text-3xl">::</span>
+          <a
+            href="https://example.com"
+            class="text-everforest-green text-sm lg:text-lg">resume</a
+          >
         </div>
       </div>
     </div>
-
-    <!-- this is the mobile section -->
   </body>
 </html>

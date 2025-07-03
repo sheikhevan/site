@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@astrojs/react": "^4.3.0",
+    "@fontsource/alegreya": "^5.2.6",
+    "@fontsource/alegreya-sans": "^5.2.6",
     "@lucide/astro": "^0.525.0",
     "@radix-ui/react-slot": "^1.2.3",
     "@tailwindcss/vite": "^4.1.11",
