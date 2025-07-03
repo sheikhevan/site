@@ -1,4 +1,4 @@
-export default function GetLatestPosts() {
+export default function GetAllPosts() {
   const matches = import.meta.glob("@/pages/writings/*.md", { eager: true });
   const posts = Object.values(matches);
   const sortedPosts = posts.sort((a, b) => {
@@ -7,11 +7,13 @@ export default function GetLatestPosts() {
 
   return (
     <ul>
-      {sortedPosts.slice(0, 9).map((post, index) => (
-        <li className="flex flex-row text-md lg:text-lg py-[0.5rem]" key={index}>
+      {sortedPosts.map((post, index) => (
+       <li className="flex flex-row text-md lg:text-lg py-[0.5rem]" key={index}>
           <p>{post.frontmatter.date}</p>
           <span> &nbsp; :: &nbsp; </span>
           <a href={post.url}>{post.frontmatter.title}</a>
+          <span> &nbsp; :: &nbsp; </span>
+          <p>{post.frontmatter.description}</p>
         </li>
       ))}
     </ul>

@@ -1,6 +1,7 @@
 ---
 import "@/styles/global.css";
 import Topbar from "@/components/Topbar";
+import GetAllPosts from "@/components/GetAllPosts";
 ---
 
 <html lang="en">
@@ -17,7 +18,15 @@ import Topbar from "@/components/Topbar";
       <div class="flex items-center justify-start">
         <div class="text-everforest-fg pt-[5rem] text-3xl lg:text-5xl">
           <h1 class="font-alegreya font-bold">writings</h1>
+          <a
+            href="/writings"
+            class="text-everforest-green text-sm hover:underline lg:text-lg"
+            >subscribe</a
+          >
         </div>
+      </div>
+      <div class="text-everforest-fg text-md pt-2 lg:text-lg">
+        <GetAllPosts />
       </div>
     </div>
   </body>
