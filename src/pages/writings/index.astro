@@ -12,6 +12,12 @@ import GetAllPosts from "@/components/GetAllPosts";
       type="image/svg+xml"
       href="https://fav.farm/%F0%9F%A7%91%E2%80%8D%F0%9F%92%BB"
     />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="evan's writings"
+      href={new URL("rss.xml", Astro.site)}
+    />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <meta name="author" content="Evan Alvarez" />
