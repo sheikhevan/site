@@ -2,6 +2,7 @@
 import "@/styles/global.css";
 import "@/styles/post.css";
 import Topbar from "@/components/Topbar";
+import PostSignature from "@/components/PostSignature.astro";
 const { frontmatter, signature } = Astro.props;
 ---
 
@@ -23,6 +24,7 @@ const { frontmatter, signature } = Astro.props;
           <p>By: {frontmatter.author}</p>
           <p>{frontmatter.date}</p>
           <slot />
+          <PostSignature />
         </div>
       </div>
     </div>
