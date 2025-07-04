@@ -2,14 +2,23 @@
 import "@/styles/global.css";
 import "@/styles/post.css";
 import Topbar from "@/components/Topbar";
-import PostSignature from "@/components/PostSignature.astro";
-const { frontmatter, signature } = Astro.props;
+const { frontmatter } = Astro.props;
+
+const slug = Astro.url.pathname.split("/").pop();
 ---
 
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="utf-8" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="https://fav.farm/%F0%9F%A7%91%E2%80%8D%F0%9F%92%BB"
+    />
+    <meta name="author" content="Evan Alvarez" />
+    <meta name="description" content="Evan Alvarez's Corner of the Internet" />
+    <meta name="keywords" content="Programming, Coding, Blog" />
     <title>{frontmatter.title} :: evanalvarez.dev</title>
   </head>
   <body class="bg-everforest-bgdim pb-[2rem]">
@@ -24,7 +33,16 @@ const { frontmatter, signature } = Astro.props;
           <p>By: {frontmatter.author}</p>
           <p>{frontmatter.date}</p>
           <slot />
-          <PostSignature />
+          <footer>
+            <p class="mt-10">
+              this post was cryptographically signed using my <a
+                href="/gpg/pubkey.asc">public key</a
+              >. Verify it using the <a href=`/gpg/posts/${slug}/index.md`
+                >raw markdown file</a
+              > and
+              <a href=`/gpg/posts/${slug}/index.md.asc`>post signature</a>.
+            </p>
+          </footer>
         </div>
       </div>
     </div>
