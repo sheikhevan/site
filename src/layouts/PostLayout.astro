@@ -37,10 +37,14 @@ const slug = Astro.url.pathname.split("/").filter(Boolean).pop();
             <p class="mt-10">
               this post was cryptographically signed using my <a
                 href="/gpg/pubkey.asc">public key</a
-              >. Verify it using the <a href=`/gpg/posts/${slug}/index.md`
+              >. Verify it using the <a
+                href=`https://github.com/sheikhevan/site/tree/master/src/pages/writings/${slug}/index.md`
                 >raw markdown file</a
               > and
-              <a href=`/gpg/posts/${slug}/index.md.asc`>post signature</a>.
+              <a
+                href=`https://github.com/sheikhevan/site/tree/master/src/pages/writings/${slug}/_index.md.asc`
+                >post signature</a
+              >.
             </p>
           </footer>
         </div>

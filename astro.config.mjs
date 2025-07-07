@@ -16,24 +16,6 @@ export default defineConfig({
   },
   integrations: [
     react(),
-    {
-      name: "copy-crypto-posts",
-      hooks: {
-        "astro:build:start": async () => {
-          console.log("running 'copy-crypto-posts' script...")
-          try {
-            execSync('node scripts/copy-crypto-posts.js', { 
-              stdio: 'inherit',
-              cwd: process.cwd()
-            });
-            console.log('✅ copy-crypto-posts completed successfully');
-          } catch (error) {
-            console.error('❌ Error running copy-crypto-posts:', error.message);
-            throw error;
-          }
-        }
-      }
-    }
   ],
   
   vite: {
