@@ -3,6 +3,7 @@ title: Have a MacBook? Use Asahi!
 date: 07-04-2025
 description: A dissertation as to the superiority of Asahi Linux.
 author: Evan Alvarez
+topics: [linux, computers, privacy]
 layout: "@/layouts/PostLayout.astro"
 ---
 
