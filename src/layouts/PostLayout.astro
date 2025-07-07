@@ -5,6 +5,8 @@ import Topbar from "@/components/Topbar";
 const { frontmatter } = Astro.props;
 
 const slug = Astro.url.pathname.split("/").filter(Boolean).pop();
+
+const topics = frontmatter.topics;
 ---
 
 <html>
@@ -31,6 +33,7 @@ const slug = Astro.url.pathname.split("/").filter(Boolean).pop();
           </h1>
           <p class="mt-2">{frontmatter.description}</p>
           <p>By: {frontmatter.author}</p>
+          <p>Topics: {topics.map((topic) => <a class="px-1" href=`/writings/topic/${topic}`>#{topic}</a>)}</p>
           <p>{frontmatter.date}</p>
           <slot />
           <footer>

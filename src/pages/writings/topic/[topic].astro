@@ -1,0 +1,74 @@
+---
+import type { GetStaticPaths } from "astro";
+import "@/styles/global.css";
+import Topbar from "@/components/Topbar";
+
+export const getStaticPaths = (() => {
+  const allPosts = Object.values(
+    import.meta.glob("@/pages/writings/*/*.md", { eager: true }),
+  );
+  return [
+    { params: { topic: "linux" }, props: { posts: allPosts } },
+    { params: { topic: "computers" }, props: { posts: allPosts } },
+    { params: { topic: "privacy" }, props: { posts: allPosts } },
+  ];
+}) satisfies GetStaticPaths;
+
+const { topic } = Astro.params;
+const { posts } = Astro.props;
+const filteredPosts = posts.filter((post: any) =>
+  post.frontmatter.topics?.includes(topic),
+);
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="https://fav.farm/%F0%9F%A7%91%E2%80%8D%F0%9F%92%BB"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="evan's writings"
+      href={new URL("rss.xml", Astro.site)}
+    />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="author" content="Evan Alvarez" />
+    <meta name="description" content="Evan Alvarez's Corner of the Internet" />
+    <meta name="keywords" content="Programming, Coding, Blog" />
+    <title>{topic} :: evanalvarez.dev</title>
+  </head>
+  <body class="bg-everforest-bgdim">
+    <Topbar />
+    <div class="mx-auto max-w-screen-xl px-6">
+      <div class="flex items-center justify-start">
+        <div class="text-everforest-fg pt-[5rem] text-3xl lg:text-5xl">
+          <h1 class="font-alegreya font-bold">{topic}</h1>
+          <a class="text-md pt-0 lg:text-lg" href="/writings">all posts</a>
+        </div>
+      </div>
+      <div class="text-everforest-fg text-md pt-2 lg:text-lg">
+        <ul>
+          {
+            filteredPosts.map((post, index) => (
+              <li
+                class="text-md flex flex-row py-[0.5rem] lg:text-lg"
+                key={index}
+              >
+                <p>{post.frontmatter.date}</p>
+                <span> &nbsp; :: &nbsp; </span>
+                <a href={post.url}>{post.frontmatter.title}</a>
+                <span> &nbsp; :: &nbsp; </span>
+                <p>{post.frontmatter.description}</p>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
