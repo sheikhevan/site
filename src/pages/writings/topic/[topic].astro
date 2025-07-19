@@ -11,6 +11,8 @@ export const getStaticPaths = (() => {
     { params: { topic: "linux" }, props: { posts: allPosts } },
     { params: { topic: "computers" }, props: { posts: allPosts } },
     { params: { topic: "privacy" }, props: { posts: allPosts } },
+    { params: { topic: "nix" }, props: { posts: allPosts } },
+    { params: { topic: "neovim" }, props: { posts: allPosts } },
   ];
 }) satisfies GetStaticPaths;
 

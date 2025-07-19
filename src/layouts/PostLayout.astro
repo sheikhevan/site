@@ -37,8 +37,8 @@ const topics = frontmatter.topics;
           <p>
             Topics: {
               topics.map((topic) => (
-                <a class="px-1" href="/writings/topic/{topic}">
-                  \#{topic}
+                <a class="px-1" href=`/writings/topic/${topic}`>
+                  #{topic}
                 </a>
               ))
             }
