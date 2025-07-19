@@ -5,7 +5,7 @@ export default function GetAllProjects() {
       language: "rust",
       url: "https://github.com/sheikhevan/rsvcs",
       description:
-        "A super simple version control system. This was my first serious Rust project.",
+        "A super simple version control system (really more of a backup utility), this was my first serious Rust project.",
       openSource: true,
       openSourceLink: "https://github.com/sheikhevan/rsvcs",
     },
