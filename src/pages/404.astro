@@ -1,7 +1,7 @@
 ---
 import "@/styles/global.css";
 import Topbar from "@/components/Topbar";
-import GetAllPosts from "@/components/GetAllPosts";
+import GetAllProjects from "@/components/GetAllProjects";
 ---
 
 <html lang="en">
@@ -12,35 +12,26 @@ import GetAllPosts from "@/components/GetAllPosts";
       type="image/svg+xml"
       href="https://fav.farm/%F0%9F%A7%91%E2%80%8D%F0%9F%92%BB"
     />
-    <link
-      rel="alternate"
-      type="application/rss+xml"
-      title="evan's writings"
-      href={new URL("rss.xml", Astro.site)}
-    />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <meta name="author" content="Evan Alvarez" />
     <meta name="description" content="Evan Alvarez's Corner of the Internet" />
     <meta name="keywords" content="Programming, Coding, Blog" />
-    <title>writings :: evanalvarez.dev</title>
+    <title>projects :: evanalvarez.dev</title>
   </head>
   <body class="bg-everforest-bgdim">
     <Topbar />
     <div class="mx-auto max-w-screen-xl px-6">
       <div class="flex items-center justify-start">
         <div class="text-everforest-fg pt-[5rem] text-3xl lg:text-5xl">
-          <h1 class="font-alegreya font-bold">writings</h1>
+          <h1 class="font-alegreya font-bold">error: 404</h1>
           <a
-            href="/rss.xml"
+            href="/"
             class="text-everforest-green text-sm hover:underline lg:text-lg"
-            >subscribe</a
+            >go back home</a
           >
         </div>
-      </div>
-      <div class="text-everforest-fg text-md pt-2 lg:text-lg">
-        <GetAllPosts />
       </div>
     </div>
   </body>

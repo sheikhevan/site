@@ -8,7 +8,10 @@ export default function GetLatestPosts() {
   return (
     <ul>
       {sortedPosts.slice(0, 9).map((post, index) => (
-        <li className="flex flex-row text-md lg:text-lg py-[0.5rem]" key={index}>
+        <li
+          className="text-md flex flex-row py-[0.5rem] lg:text-lg"
+          key={index}
+        >
           <p>{post.frontmatter.date}</p>
           <span> &nbsp; :: &nbsp; </span>
           <a href={post.url}>{post.frontmatter.title}</a>

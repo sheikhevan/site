@@ -7,6 +7,8 @@ import { execSync } from 'child_process';
 
 import tailwindcss from "@tailwindcss/vite";
 
+import sitemap from "@astrojs/sitemap";
+
 // https://astro.build/config
 export default defineConfig({
   markdown: {
@@ -14,9 +16,7 @@ export default defineConfig({
       theme: 'everforest-dark',
     },
   },
-  integrations: [
-    react(),
-  ],
+  integrations: [react(), sitemap()],
   
   vite: {
     plugins: [tailwindcss()],

@@ -1,6 +1,7 @@
 ---
 import "@/styles/global.css";
 import Topbar from "@/components/Topbar";
+import GetAllProjects from "@/components/GetAllProjects";
 ---
 
 <html lang="en">
@@ -11,6 +12,7 @@ import Topbar from "@/components/Topbar";
       type="image/svg+xml"
       href="https://fav.farm/%F0%9F%A7%91%E2%80%8D%F0%9F%92%BB"
     />
+    <link rel="sitemap" href="/sitemap-index.xml" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <meta name="author" content="Evan Alvarez" />
@@ -24,7 +26,15 @@ import Topbar from "@/components/Topbar";
       <div class="flex items-center justify-start">
         <div class="text-everforest-fg pt-[5rem] text-3xl lg:text-5xl">
           <h1 class="font-alegreya font-bold">projects</h1>
+          <a
+            href="https://github.com/sheikhevan"
+            class="text-everforest-green text-sm hover:underline lg:text-lg"
+            >github</a
+          >
         </div>
+      </div>
+      <div class="text-everforest-fg text-md pt-2 lg:text-lg">
+        <GetAllProjects />
       </div>
     </div>
   </body>
