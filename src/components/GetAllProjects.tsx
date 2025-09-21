@@ -17,6 +17,14 @@ export default function GetAllProjects() {
             openSource: true,
             openSourceLink: "https://github.com/sheikhevan/zk-graphview",
         },
+        {
+            name: "newspaper",
+            language: "rust, typst",
+            url: "https://github.com/sheikhevan/newspaper",
+            description: "A program to generate newspapers from RSS feeds using typst for markup and tera for templating.",
+            openSource: true,
+            openSourceLink: "https://github.com/sheikhevan/newspaper",
+        },
     ];
     return (
         <ul>
