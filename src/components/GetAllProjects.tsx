@@ -25,6 +25,14 @@ export default function GetAllProjects() {
             openSource: true,
             openSourceLink: "https://github.com/sheikhevan/newspaper",
         },
+        {
+            name: "rstatus",
+            language: "rust",
+            url: "https://github.com/sheikhevan/rstatus",
+            description: "A minimal, hackable status bar for i3/sway.",
+            openSource: true,
+            openSourceLink: "https://github.com/sheikhevan/rstatus",
+        },
     ];
     return (
         <ul>

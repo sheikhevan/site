@@ -5,108 +5,101 @@ import GetLatestPosts from "@/components/GetLatestPosts";
 ---
 
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="/favicon.svg"
-    />
-    <link
-      rel="alternate"
-      type="application/rss+xml"
-      title="evan's writings"
-      href={new URL("rss.xml", Astro.site)}
-    />
-    <link rel="sitemap" href="/sitemap-index.xml" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <meta name="author" content="Evan Alvarez" />
-    <meta name="description" content="Evan Alvarez's Corner of the Internet" />
-    <meta name="keywords" content="Programming, Coding, Blog" />
-    <title>home :: evanalvarez.dev</title>
-  </head>
-  <body class="bg-everforest-bgdim">
-    <Topbar />
-    <div class="mx-auto max-w-screen-xl px-6">
-      <div class="flex items-center justify-start">
-        <div class="text-everforest-fg pt-[5rem] text-3xl lg:text-5xl">
-          <h1 class="font-alegreya font-bold">evan alvarez</h1>
-          <a
-            href="mailto:evanalvarez@tutamail.com"
-            class="text-everforest-green text-sm hover:underline lg:text-lg"
-            >email</a
-          >
-          <span class="text-xl lg:text-2xl">::</span>
-          <a
-            class="text-everforest-green text-sm hover:underline lg:text-lg"
-            href="/gpg/pubkey.asc">pgp</a
-          >
-          <span class="text-xl lg:text-2xl">::</span>
-          <a
-            href="https://github.com/sheikhevan"
-            class="text-everforest-green text-sm hover:underline lg:text-lg"
-            >github</a
-          >
-          <span class="text-xl lg:text-2xl">::</span>
-          <a
-            href="https://youtube.com/@sheikhevan0"
-            class="text-everforest-green text-sm hover:underline lg:text-lg"
-            >youtube</a
-          >
-          <span class="text-xl lg:text-2xl">::</span>
-          <a
-            href="/resume/resume.pdf"
-            class="text-everforest-green text-sm hover:underline lg:text-lg"
-            >resume</a
-          >
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link
+            rel="alternate"
+            type="application/rss+xml"
+            title="evan's writings"
+            href={new URL("rss.xml", Astro.site)}
+        />
+        <link rel="sitemap" href="/sitemap-index.xml" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <meta name="author" content="Evan Alvarez" />
+        <meta
+            name="description"
+            content="Evan Alvarez's Corner of the Internet"
+        />
+        <meta name="keywords" content="Programming, Coding, Blog" />
+        <title>home :: evanalvarez.dev</title>
+    </head>
+    <body class="bg-everforest-bgdim">
+        <Topbar />
+        <div class="mx-auto max-w-screen-xl px-6">
+            <div class="flex items-center justify-start">
+                <div class="text-everforest-fg pt-[5rem] text-3xl lg:text-5xl">
+                    <h1 class="font-alegreya font-bold">evan alvarez</h1>
+                    <a
+                        href="mailto:evanalvarez@tutamail.com"
+                        class="text-everforest-green text-sm hover:underline lg:text-lg"
+                        >email</a
+                    >
+                    <span class="text-xl lg:text-2xl">::</span>
+                    <a
+                        class="text-everforest-green text-sm hover:underline lg:text-lg"
+                        href="/gpg/pubkey.asc">pgp</a
+                    >
+                    <span class="text-xl lg:text-2xl">::</span>
+                    <a
+                        href="https://github.com/sheikhevan"
+                        class="text-everforest-green text-sm hover:underline lg:text-lg"
+                        >github</a
+                    >
+                    <span class="text-xl lg:text-2xl">::</span>
+                    <a
+                        href="/resume/resume.pdf"
+                        class="text-everforest-green text-sm hover:underline lg:text-lg"
+                        >resume</a
+                    >
+                </div>
+            </div>
+            <div class="text-everforest-fg text-md pt-2 lg:text-lg">
+                Welcome to my small corner of the internet! I'm a programmer
+                primarily focused on the Rust ecosystem based out of Austin,
+                Texas. I am also currently a senior at UTHS. On this page, I <a
+                    class="text-everforest-green hover:underline"
+                    href="/writings">write</a
+                > about things I enjoy talking about. I am also a proud user of free
+                (as in freedom) software. You can read more about my operating system
+                and development environment <a
+                    class="text-everforest-green hover:underline"
+                    href="writings/what-tech-do-i-use-2025">here</a
+                >. Also, thanks to <a
+                    class="text-everforest-green hover:underline"
+                    href="https://spacetime.dev">spacetime.dev</a
+                > for inspiration on this site's design.
+            </div>
+            <div class="text-everforest-fg text-md pt-2 lg:text-lg">
+                <h1 class="pt-[3rem] text-3xl">recent posts</h1>
+                <a href="/writings">all posts</a>
+                <span class="text-xl lg:text-2xl">::</span>
+                <a href="/rss.xml">subscribe</a>
+                <GetLatestPosts />
+            </div>
+            <div class="text-everforest-fg text-md pt-2 lg:text-lg">
+                <h1 class="pt-[3rem] text-3xl">cryptography</h1>
+                <a
+                    class="text-everforest-green text-sm hover:underline lg:text-lg"
+                    href="/gpg/pubkey.asc">pgp</a
+                >
+                <span class="text-xl lg:text-2xl">::</span>
+                <a href="/gpg/fingerprint">fingerprint</a>
+                <p class="text-md text-everforest-fg pt-2 lg:text-lg">
+                    All posts on this website are cryptographically signed using
+                    PGP for verification of their authenticity. This site is
+                    also fully open source, it's source code can be found <a
+                        href="https://github.com/sheikhevan/site">here</a
+                    >.
+                </p>
+            </div>
+            <div class="text-everforest-fg text-md pt-2 lg:text-lg">
+                <h1 class="pt-[3rem] text-3xl">projects</h1>
+                <a href="/projects">all projects</a>
+                <span class="text-xl lg:text-2xl">::</span>
+                <a href="https://github.com/sheikhevan/">github</a>
+            </div>
         </div>
-      </div>
-      <div class="text-everforest-fg text-md pt-2 lg:text-lg">
-        Welcome to my small corner of the internet! I'm a programmer primarily
-        focused on the Rust ecosystem based out of Austin, Texas. I am also
-        currently a senior at UTHS. On this page, I <a
-          class="text-everforest-green hover:underline"
-          href="/writings">write</a
-        > about things I enjoy talking about. I am also a proud user of free (as
-        in freedom) software. You can read more about my operating system and development
-        environment <a
-          class="text-everforest-green hover:underline"
-          href="writings/what-tech-do-i-use-2025">here</a
-        >. Also, thanks to <a
-          class="text-everforest-green hover:underline"
-          href="https://spacetime.dev">spacetime.dev</a
-        > for inspiration on this site's design.
-      </div>
-      <div class="text-everforest-fg text-md pt-2 lg:text-lg">
-        <h1 class="pt-[3rem] text-3xl">recent posts</h1>
-        <a href="/writings">all posts</a>
-        <span class="text-xl lg:text-2xl">::</span>
-        <a href="/rss.xml">subscribe</a>
-        <GetLatestPosts />
-      </div>
-      <div class="text-everforest-fg text-md pt-2 lg:text-lg">
-        <h1 class="pt-[3rem] text-3xl">cryptography</h1>
-        <a
-          class="text-everforest-green text-sm hover:underline lg:text-lg"
-          href="/gpg/pubkey.asc">pgp</a
-        >
-        <span class="text-xl lg:text-2xl">::</span>
-        <a href="/gpg/fingerprint">fingerprint</a>
-        <p class="text-md text-everforest-fg pt-2 lg:text-lg">
-          All posts on this website are cryptographically signed using PGP for
-          verification of their authenticity. This site is also fully open
-          source, it's source code can be found <a
-            href="https://github.com/sheikhevan/site">here</a
-          >.
-        </p>
-      </div>
-      <div class="text-everforest-fg text-md pt-2 lg:text-lg">
-        <h1 class="pt-[3rem] text-3xl">projects</h1>
-        <a href="/projects">all projects</a>
-        <span class="text-xl lg:text-2xl">::</span>
-        <a href="https://github.com/sheikhevan/">github</a>
-      </div>
-    </div>
-  </body>
+    </body>
 </html>
